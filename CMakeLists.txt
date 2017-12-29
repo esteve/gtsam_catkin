@@ -11,7 +11,7 @@ include(ExternalProject)
 file(MAKE_DIRECTORY ${CATKIN_DEVEL_PREFIX}/include)
 ExternalProject_Add(gtsam_src
   GIT_REPOSITORY https://bitbucket.org/gtborg/gtsam.git
-  GIT_TAG 687ae3d2511b9c296af08ec2f2e717b0627a8d68
+  GIT_TAG release/3.2.1
   CMAKE_ARGS
     -DCMAKE_INSTALL_PREFIX:PATH=${CATKIN_DEVEL_PREFIX}
     -DGTSAM_USE_SYSTEM_EIGEN=ON
