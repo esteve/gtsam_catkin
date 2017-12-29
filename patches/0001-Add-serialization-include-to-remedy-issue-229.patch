@@ -1,0 +1,24 @@
+From 978e5534c8e4175c4afc065a648592c821de07cd Mon Sep 17 00:00:00 2001
+From: cbeall3 <cbeall3@gatech.edu>
+Date: Wed, 20 May 2015 21:38:38 -0400
+Subject: [PATCH] Add serialization include to remedy issue #229
+
+---
+ gtsam/base/FastSet.h | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/gtsam/base/FastSet.h b/gtsam/base/FastSet.h
+index 69e841e57..3e5a58f2d 100644
+--- a/gtsam/base/FastSet.h
++++ b/gtsam/base/FastSet.h
+@@ -26,6 +26,7 @@
+ #include <cmath>
+ #include <boost/mpl/has_xxx.hpp>
+ #include <boost/utility/enable_if.hpp>
++#include <boost/serialization/serialization.hpp>
+ #include <boost/serialization/nvp.hpp>
+ #include <boost/serialization/set.hpp>
+ 
+-- 
+2.11.0
+
