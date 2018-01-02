@@ -12,6 +12,7 @@ file(MAKE_DIRECTORY ${CATKIN_DEVEL_PREFIX}/include)
 ExternalProject_Add(gtsam_src
   GIT_REPOSITORY https://bitbucket.org/gtborg/gtsam.git
   GIT_TAG release/3.2.1
+  PATCH_COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/patches/apply_patches.sh ${CMAKE_CURRENT_SOURCE_DIR}/patches
   CMAKE_ARGS
     -DCMAKE_INSTALL_PREFIX:PATH=${CATKIN_DEVEL_PREFIX}
     -DGTSAM_USE_SYSTEM_EIGEN=ON
